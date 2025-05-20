@@ -11,7 +11,7 @@ public class SampleConsumer {
     private static final Logger log = LoggerFactory.getLogger(SampleConsumer.class);
 
     @KafkaListener(topics = "${spring.kafka.topic.sample}")
-    public void listenGroupFoo(String message) {
+    public void listenMessage(String message) {
         log.info("Received Message: {}", message);
     }
 }

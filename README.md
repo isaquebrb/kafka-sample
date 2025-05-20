@@ -1,7 +1,6 @@
 # Kafka Sample
 
-This project consumes messages from a kafka topic (azure event hub),
-containing information (customer and account) of the beneficiary registered in the multi-benefit flow.
+This project exemplifies an integration between Spring and Kafka, through a consumer and a producer of messages.
 
 ### Stack
 - Java 21

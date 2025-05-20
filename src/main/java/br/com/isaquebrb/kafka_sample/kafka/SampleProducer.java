@@ -22,6 +22,6 @@ public class SampleProducer {
 
     public void sendMessage(SampleMessage sampleMessage) {
         kafkaTemplate.send(topicSampleName, sampleMessage);
-        log.info("Sent Message: {}", sampleMessage);
+        log.info("Sent Message '{}' to topic: {}", sampleMessage, topicSampleName);
     }
 }

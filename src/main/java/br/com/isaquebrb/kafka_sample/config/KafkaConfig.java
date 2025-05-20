@@ -1,14 +1,18 @@
 package br.com.isaquebrb.kafka_sample.config;
 
 import org.apache.kafka.clients.admin.NewTopic;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class KafkaConfig {
 
+    @Value("${spring.kafka.topic.sample}")
+    private String topicSampleName;
+
     @Bean
     public NewTopic sampleTopic() {
-        return new NewTopic("sample-topic", 1, (short) 1);
+        return new NewTopic(topicSampleName, 1, (short) 1);
     }
 }
